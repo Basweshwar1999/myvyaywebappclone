@@ -1,0 +1,46 @@
+/* StatusCard.css */
+
+.status-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid;
+  border-radius: 12px; /* Slightly larger border radius for a softer look */
+  padding: 20px; /* Increased padding for a more spacious feel */
+  margin: 15px; /* Increased margin for better spacing */
+  width: 220px; /* Slightly wider card */
+  background: #ffffff; /* Card background color */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+.status-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+  background: linear-gradient(145deg, #f7f9fc, #e4e8f1); /* Gradient background on hover */
+}
+
+.status-icon {
+  font-size: 36px; /* Larger icon size for better visibility */
+  color: #ffffff; /* White icon color for contrast */
+  background: #EF6A32; /* Background color for the icon */
+  padding: 10px; /* Padding around the icon */
+  border-radius: 50%; /* Circular background for the icon */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the icon */
+}
+
+.status-info h4 {
+  margin: 0;
+  font-size: 18px; /* Font size for title */
+  color: #2c3e50; /* Dark color for better readability */
+  font-weight: 500; /* Medium weight for a clean look */
+}
+
+.status-info p {
+  margin: 0;
+  font-size: 24px; /* Font size for count */
+  font-weight: 700; /* Bold weight for emphasis */
+  color: #2c3e50; /* Dark color for count */
+}

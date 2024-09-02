@@ -1,0 +1,30 @@
+.tabs-component {
+    margin-top: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+   background-color: antiquewhite;
+  }
+  
+  .tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #ecf0f1;
+  }
+  
+  .tabs button.active {
+    background-color: #3498db;
+    color: white;
+  }
+  .tabs button.inactive {
+    background-color: #fefdfb;
+    color: rgb(9, 9, 9);
+  }
+  
+  .tab-content {
+    margin-top: 20px;
+  }
+  

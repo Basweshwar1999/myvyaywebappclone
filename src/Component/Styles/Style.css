@@ -1,0 +1,527 @@
+.navbar-name {
+  font-family: 'Dancing Script', cursive; /* Elegant cursive font (optional) */
+  font-size: 2.5rem; /* Adjust font size as needed */
+  color: #171414; /* White color for good contrast */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow effect (optional) */
+  /* margin: 0 220px; Add some margin for spacing */
+  cursor: default; /* Indicate non-clickable element */
+}
+
+.navbar-name:hover { /* Optional hover effect */
+  color: #89f597; /* Change color on hover (gold) */
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+}
+
+.tab {
+  min-height: 100vh; /* Ensure the container fills the viewport height */
+  display: flex; /* Allow stacking content vertically */
+  flex-direction: column; /* Stack content top to bottom */
+}
+.body {
+padding-top: 7%;
+background-image: url("../Images/aa.jpg");
+/* backgroundSize: 'cover', */
+
+}
+.logo{
+  position: relative;
+  left:  8;
+  border-radius: 50px;
+  height: 20px;
+  width: 20px;
+}
+.r1 {
+  position: absolute;
+  right:  0;
+  top: 0;
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
+}
+/* General styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Add some padding */
+}
+
+.profile-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow content to wrap if needed */
+  width: 80%; /* Limit content width */
+  margin: 0 auto; /* Center content horizontally */
+}
+
+.profile-info {
+  flex: 1 1 40%; /* Take up 40% of available space */
+  padding: 10px;
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f0f0f0; /* Light gray background */
+  margin-bottom: 20px;
+  text-align: center; /* Center text in info section */
+}
+
+.profile-picture {
+  width: 150px; /* Set a fixed width for the profile picture */
+  height: 150px;
+  border-radius: 50%; /* Circle the profile picture */
+  margin-bottom: 10px;
+}
+
+.profile-image-slider {
+  flex: 1 1 60%; /* Take up 60% of available space */
+  display: flex;
+  overflow-x: scroll; /* Enable horizontal scrolling if needed */
+  white-space: nowrap; /* Prevent line breaks between images */
+  margin-bottom: 20px;
+}
+
+.slider-image {
+  margin: 0 5px; /* Add spacing between slider images */
+  width: 100px; /* Set a fixed width for slider images */
+  height: 100px;
+  object-fit: cover; /* Crop images to fit within dimensions */
+  cursor: pointer; /* Indicate clickable slider images */
+}
+  .navbar {
+    display: flex; /* Inherit from your Navbar component */
+    /* justify-content: start; Inherit from your Navbar component */
+    align-items: center; /* Inherit from your Navbar component */
+    /* padding: 1rem 2rem; Inherit from your Navbar component */
+    background-color: #faf8f5; /* Light background color */
+    position: fixed; /* Fix the navbar to the top of the page */
+    top: 0; /* Position at the top */
+    width: 100%; /* Span the full width */
+    height: 15%;
+    z-index: 10; /* Ensure the navbar is on top of other elements */
+    box-shadow: 0 2px 5px rgba(5, 5, 5, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition effect */
+    /* padding: 3%; */
+  }
+  
+  .navbar.scrolled {
+    /* Additional styles for scrolled state */
+    background-color: #f4f3f1; /* Slightly darker background on scroll */
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on scroll */
+  }
+  
+  .navbar ul {
+    list-style: none; /* Inherit from your Navbar component */
+    margin-left: 20;
+    margin: 0; /* Inherit from your Navbar component */
+    padding: 0; /* Inherit from your Navbar component */
+    display: flex; /* Inherit from your Navbar component */
+  }
+  
+  .navbar li {
+    margin-right: 1rem; /* Inherit from your Navbar component */
+    font-weight: bold; /* Add some weight to the links */
+  }
+  
+  .navbar li:last-child {
+    margin-right: 0; /* Remove margin from the last link */
+  }
+  
+  .navbar a {
+    color: #000; /* Text color for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease-in-out; /* Add smooth hover effect */
+  }
+  
+  .navbar a:hover {
+    color: #10ee0c; /* Change link color on hover */
+  }
+  
+  /* Optional: Add a logo image */
+  .navbar .logo {
+    width: 100px; /* Adjust logo width as needed */
+    height: auto; /* Maintain logo aspect ratio */
+    margin-right: 1rem; /* Add some margin after the logo */
+  }
+  
+  /* Responsive Styles (Media Queries) */
+  @media (max-width: 768px) {
+    .navbar {
+      /* Adjust styles for smaller screens (e.g., mobile) */
+      flex-wrap: wrap; /* Wrap links to multiple lines on small screens */
+      justify-content: center; /* Center links horizontally on small screens */
+    }
+  
+    .navbar ul {
+      /* Adjust list styling for smaller screens */
+      margin: 0 auto; /* Center the list horizontally on small screens */
+    }
+  
+    .navbar li {
+      /* Adjust margin for smaller screens */
+      margin: 0.5rem 1rem; /* Add some margin between links on small screens */
+    }
+  
+    .navbar .logo {
+      /* Adjust logo size for smaller screens */
+      width: 50px; /* Adjust logo width as needed */
+    }
+  }
+  
+
+
+
+
+
+
+
+  /* Footer_______________________________ */
+
+  .footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .copyright {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  .footer-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+  
+/* Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+  /* Add styles for hero image/video, heading, and paragraph */
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  /* Add styles for profile picture, heading, paragraph, and contact button */
+}
+/* General styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full viewport height */
+  background: linear-gradient(to right, #f2994a 0%, #f15f79 33%, #f8c274 66%, #c02942 100%); /* Multicolor gradient */
+}
+
+
+main {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+}
+
+/* Hero section */
+.hero {
+  background-image: url("../Images/360_F_551973570_VXTDIzhU4GFXslKedPVQFBUfKYbIF3OM.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* White text over image */
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Home content section */
+.home-content {
+  background-color: #e6c48a; /* Light gray background */
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.home-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.home-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Similar styles for Skills, Portfolio, and Contact sections */
+/* contact us page _____________ */
+/* Base colors */
+:root {
+  --primary-color: #f9b405; /* Blue */
+  --secondary-color: #F5F5F5; /* Light Gray */
+  --accent-color: #ff9900; /* Orange accent */
+}
+
+/* .contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  height: 100%;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); 
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+} */
+.background-video {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  width: 40%;
+  height: 40%; /* Adjust height as needed */
+  object-fit: cover; /* Crop video to fit container */
+  opacity: 1; /* Adjust opacity for a subtle effect */
+}
+.contact-container {
+  display: flex; /* Allow video and details side-by-side */
+  justify-content: center; /* Center the content horizontally */
+  width: 80%; /* Set a maximum width for the container */
+  margin: 50px auto; /* Add margin for spacing */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  background-color: #f5f5f5; /* Light gray background */
+}
+
+
+.contact-card {
+  display: flex;
+  width: 80%; /* Adjust width as needed */
+  background-color: #fff; /* White background for the card */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* padding: 20px; */
+  padding-top: 20%;
+  padding-left: 20%;
+}
+
+.video-container {
+  flex: 1; /* Allocate space for video */
+  top: 10;
+}
+
+.contact-details {
+  flex: 1; /* Allocate space for contact details */
+  padding-left: 20px; /* Add space between video and details */
+}
+
+.contact-heading {
+  margin-bottom: 10px;
+}
+
+.contact-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.icon {
+  fill:currentColor; /* Set icon color based on overall styling */
+}
+
+
+
+/*  end of contact us page  */
+
+
+
+/* About page start______________ */
+
+.about-container {
+  /* display: flex;  */
+  justify-content: center; /* Center the card horizontally */
+  margin: 50px auto; /* Add margin for spacing */
+  padding: 5%;
+}
+
+.about-card {
+  display: flex; /* Arrange content side-by-side */
+  width: 100%;
+  background-color: transparent; /* White background for the card */
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px 5px rgba(243, 127, 25, 0.1); /* Subtle shadow */
+  padding: 20px;
+}
+
+.about-content {
+  flex: 2; /* Allocate more space for content */
+  text-align: justify;
+}
+
+.about-team {
+  flex: 1; /* Allocate space for team section and image */
+  text-align: center;
+}
+
+.about-heading {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-slogan {
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #333; /* Adjust slogan color */
+}
+
+.about-content p {
+  text-align: justify; /* Justify text for better readability */
+  line-height: 1.5; /* Adjust line spacing for better readability */
+  margin-bottom: 15px; /* Add space between paragraphs */
+}
+
+.about-team h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.team-image {
+  border-radius: 5px; /* Rounded corners for the team image */
+  width: 80%; /* Adjust image width to fit the section */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.about-cta {
+  display: flex; /* Arrange CTA buttons side-by-side */
+  justify-content: space-around; /* Center buttons horizontally */
+  margin-top: 40px; /* Add space above the CTA section */
+
+}
+
+.cta-button {
+  /* ... existing CTA button styles ... */
+}
+
+
+
+/*  end about page _________________ */
+
+/* create Account page___________ */
+
+.create-account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh; /* Set minimum height for full viewport */
+  color: whitesmoke;
+  background-image: url('../Images/images.jpeg'); /* Add a background image */
+  background-size: cover; /* Stretch background image to cover the container */
+  background-attachment: fixed; /* Fix background image to prevent scrolling */
+  font-family: 'Open Sans', sans-serif; /* Use a modern and readable font */
+}
+
+.create-account-form {
+  position: absolute;
+  right: 3%;
+  background-color: #fff; /* White form background */
+  border-radius: 5px;
+  padding: 20px;
+  width: 450px; /* Adjust form width as needed */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.form-group {
+  margin-bottom: 15px;
+  padding-right: 5%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold; /* Make labels bolder */
+}
+
+.create-account-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: border-color 0.2s ease-in-out; /* Add transition for smoother changes */
+}
+
+.create-account-form input:focus {
+  outline: none;
+  border-color: #3399ff; 
+}
+.create-account-button {
+  background-color: #3399ff; /* Primary button color (blue) */
+  color: #fff; /* Button text color (white) */
+  margin-top: 20px;
+  margin-left: 30%;
+  padding: 15px 40px; /* Increase padding for better button size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.create-account-button:hover {
+  background-color: #2eafff; /* Lighter blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+/* end create acccount page  */
