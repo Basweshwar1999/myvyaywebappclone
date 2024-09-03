@@ -31,7 +31,7 @@ const Login= () => {
     };
 
     try {
-      const response = await fetch('https://apidev.vyay.live/LoginUser', {
+      const response = await fetch('http://localhost:59144/LoginUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,11 +40,14 @@ const Login= () => {
       });
 
       const data = await response.json();
-
+      console.log("rutik________________",data);
       if (response.ok) {
         // Assuming token is in data.token, store it and navigate to dashboard
-        localStorage.setItem('token', data.token);
-        navigate('/dashboard');
+        if (!data.isException) {
+          localStorage.setItem('token', data.token);
+          navigate('/dashboard');
+        
+        }
       } else {
         setErrorMessage(data.message || 'Invalid username or password');
       }
@@ -54,7 +57,7 @@ const Login= () => {
   };
 
   return (
-    <div className="login-page">
+    <div className="login-page" >
       <form onSubmit={handleLogin} className="login-form">
         <h2>Login</h2>
         <div className="input-group">

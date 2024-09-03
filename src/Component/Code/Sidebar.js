@@ -78,7 +78,7 @@ const Sidebar = () => {
           </div>
           <ul className={`${classes.subMenu} ${openMenu === 'createRequest' ? classes.subMenuOpen : ''}`}>
             <li >
-              <Link to="/tour-plan" className={classes.link}>
+              <Link to="/CreateTravelReq" className={classes.link}>
                 <FlightIcon className={classes.icon} />
                 Travel Request
               </Link>
