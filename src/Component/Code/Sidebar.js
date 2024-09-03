@@ -8,8 +8,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AddIcon from '@mui/icons-material/Add';
 import FlightIcon from '@mui/icons-material/Flight';
 import ExpenseIcon from '@mui/icons-material/Receipt';
+import AddExpenseModal from './CreGenReq'; // Import your AddExpenseModal component
 import '../Styles/Sidebar.css';
-import image1 from '../Images/vyay.png';
+import image1 from '../Images/vvv.png';
 
 const useStyles = makeStyles((theme) => ({
   sidebar: {
@@ -40,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#ecf0f1',
     display: 'flex',
     alignItems: 'center',
-    cursor: 'pointer', // Change cursor to pointer for clickable items
+    cursor: 'pointer',
   },
   icon: {
     marginRight: '20px',
@@ -48,19 +49,33 @@ const useStyles = makeStyles((theme) => ({
   subMenu: {
     listStyleType: 'none',
     paddingLeft: '30px',
-    display: 'none', // Hide submenu by default
+    display: 'none',
   },
   subMenuOpen: {
-    display: 'block', // Show submenu when open
+    display: 'block',
   },
 }));
 
 const Sidebar = () => {
   const classes = useStyles();
   const [openMenu, setOpenMenu] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to handle modal visibility
 
   const handleMenuClick = (menuName) => {
     setOpenMenu(openMenu === menuName ? null : menuName);
+  };
+
+  const handleGeneralExpenseClick = () => {
+    setIsModalOpen(true); // Open modal when General Expense is clicked
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false); // Close modal
+  };
+
+  const handleSaveExpense = (expenseData) => {
+    console.log('Expense Data:', expenseData); // Log or process the saved data
+    setIsModalOpen(false); // Close modal after saving
   };
 
   return (
@@ -77,20 +92,23 @@ const Sidebar = () => {
             <ExpandMoreIcon />
           </div>
           <ul className={`${classes.subMenu} ${openMenu === 'createRequest' ? classes.subMenuOpen : ''}`}>
-            <li >
+            <li>
               <Link to="/CreateTravelReq" className={classes.link}>
                 <FlightIcon className={classes.icon} />
                 Travel Request
               </Link>
             </li>
             <li>
-              <Link to="/general-expense" className={classes.link}>
+              <div onClick={handleGeneralExpenseClick} className={classes.link}>
                 <ExpenseIcon className={classes.icon} />
                 General Expense
-              </Link>
+              </div>
             </li>
+         
           </ul>
+
         </li>
+        {/* Other navigation items here */}
         <li className={classes.navItem}>
           <div onClick={() => handleMenuClick('viewRequests')} className={classes.link}>
             <RequestPageIcon className={classes.icon} />
@@ -122,6 +140,9 @@ const Sidebar = () => {
           </ul>
         </li>
       </ul>
+      {isModalOpen && (
+        <AddExpenseModal onClose={handleModalClose} onSave={handleSaveExpense} />
+      )}
     </div>
   );
 };

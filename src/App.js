@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import LoginPage from './Component/Code/Login';
 import Dashboard from './Component/Code/Dashboard';
 import CreateTravelReq from './Component/Code/CreateTravelReq';
+import CreGenReq from './Component/Code/CreGenReq';
+
 function App() {
   return (
     <Router>
@@ -10,6 +12,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/CreateTravelReq" element={<CreateTravelReq />} />
+        <Route path="/CreGenReq" element={<CreGenReq />} />
         <Route path="/" element={<Navigate to="/login" />} /> {/* Replaces Redirect */}
       </Routes>
     </Router>
