@@ -13,15 +13,15 @@ const Login= () => {
     e.preventDefault();
    
 
-    if (username === 'basweshwar' && password === 'Rutik@1902') {
-      // Login successful
-      navigate('/dashboard');
+    // if (username === 'basweshwar' && password === 'Rutik@1902') {
+    //   // Login successful
+    //   navigate('/dashboard');
 
-    } else {
-      alert('Invalid username or password');
-    }
+    // } else {
+    //   alert('Invalid username or password');
+    // }
 
-    return false;
+    // return false;
 
     const payload = {
       userName: username,
@@ -31,7 +31,7 @@ const Login= () => {
     };
 
     try {
-      const response = await fetch('http://localhost:59144/LoginUser', {
+      const response = await fetch('http://13.126.125.20:8091/LoginUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -28,7 +28,7 @@ const TabsComponent = () => {
 
       try {
         if (activeTab === 'post-travel') {
-          const travelResponse = await fetch('http://localhost:59144/PreTravel', {
+          const travelResponse = await fetch('http://13.126.125.20:8091/PreTravel', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const TabsComponent = () => {
         }
 
         if (activeTab === 'general-expense') {
-          const generalResponse = await fetch('http://localhost:59144/GeneralExpenses', {
+          const generalResponse = await fetch('http://13.126.125.20:8091/GeneralExpenses', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

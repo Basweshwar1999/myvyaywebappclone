@@ -19,7 +19,7 @@ const Dashboard = () => {
         if (!token) {
           throw new Error('No token found in local storage');
         }
-        const response = await fetch('http://localhost:59144/GetUserRequestDetails', {
+        const response = await fetch('http://13.126.125.20:8091/GetUserRequestDetails', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
