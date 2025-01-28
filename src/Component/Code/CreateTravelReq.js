@@ -119,11 +119,11 @@ const CreateTravelReq = () => {
       <div className="section employee-details">
         <h2>Employee Details</h2>
         <div className="details-grid">
-          <div><strong>Employee Id:</strong> Emp00123</div>
+          <div><strong>Employee Id:</strong> Emp1028</div>
           <div><strong>Designation:</strong> Employee(EE)</div>
-          <div><strong>First Name:</strong> Employee</div>
-          <div><strong>Last Name:</strong> Dummy</div>
-          <div><strong>Email Id:</strong> mailto:shruti.test@botmaticsolution.in</div>
+          <div><strong>First Name:</strong> Basweshwar</div>
+          <div><strong>Last Name:</strong> Gubge</div>
+          <div><strong>Email Id:</strong> Basweshwar.g@botmaticsolution.in</div>
           <div><strong>Mobile No:</strong> 91-8530617353</div>
         </div>
       </div>

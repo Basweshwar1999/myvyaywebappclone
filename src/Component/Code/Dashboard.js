@@ -78,6 +78,7 @@ import Sidebar from './Sidebar';
 import StatusCard from './StatusCard';
 import TabsComponent from './TabsComponent';
 import '../Styles/Dashboard.css'; // Assuming you have a CSS file for styling
+import Environment from '../../environment';
 
 const Dashboard = () => {
   // State to store API response
@@ -94,7 +95,7 @@ const Dashboard = () => {
         if (!token) {
           throw new Error('No token found in local storage');
         }
-        const response = await fetch('http://localhost:59144/GetUserRequestDetails', {
+        const response = await fetch(Environment.BASE_URL+'GetUserRequestDetails', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

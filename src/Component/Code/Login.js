@@ -91,7 +91,7 @@ export default Login;
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // useNavigate replaces useHistory
 import '../Styles/Dashboard.css'; // Assuming you have a CSS file for styling
-
+import Environment from '../../environment';
 const Login= () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -121,7 +121,7 @@ const Login= () => {
     };
 
     try {
-      const response = await fetch('http://localhost:59144/LoginUser', {
+      const response = await fetch(Environment.BASE_URL+'LoginUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -147,7 +147,13 @@ const Login= () => {
   };
 
   return (
+    
     <div className="login-page" >
+        <div className="logo-container">
+        {/* Place your logo here */}
+        {/* <img src="/path/to/logo.png" alt="Logo" style={{ maxWidth: '200px' }} /> Adjust path and size */}
+      </div>
+      <div className="login-form-container">
       <form onSubmit={handleLogin} className="login-form">
         <h2>Login</h2>
         <div className="input-group">
@@ -171,6 +177,7 @@ const Login= () => {
         {errorMessage && <div className="error-message">{errorMessage}</div>}
         <button type="submit">Login</button>
       </form>
+      </div>
     </div>
   );
 };

@@ -156,6 +156,7 @@ export default TabsComponent;
 =======
 import React, { useState, useEffect } from 'react';
 import '../Styles/TabsComponent.css'; // Assuming you have a CSS file for styling
+import Environment from '../../environment';
 
 const TabsComponent = () => {
   const [activeTab, setActiveTab] = useState('post-travel');
@@ -184,7 +185,7 @@ const TabsComponent = () => {
 
       try {
         if (activeTab === 'post-travel') {
-          const travelResponse = await fetch('http://localhost:59144/PreTravel', {
+          const travelResponse = await fetch(Environment.BASE_URL+'PreTravel', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -209,7 +210,7 @@ const TabsComponent = () => {
         }
 
         if (activeTab === 'general-expense') {
-          const generalResponse = await fetch('http://localhost:59144/GeneralExpenses', {
+          const generalResponse = await fetch(Environment.BASE_URL+'GeneralExpenses', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

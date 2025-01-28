@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .dashboard {
     display: flex;
@@ -149,3 +150,117 @@
   background-color: #f44336;
   color: white;
 }
+=======
+
+.dashboard {
+    display: flex;
+  }
+  
+  .main-content {
+    margin-left: 20px;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .status-cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  .login-page {
+    display: flex; /* Use flexbox to align logo and form side by side */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../Images/expense.png'); /* Add your background image */
+    background-size: contain;
+    background-position: start;
+    background-repeat: no-repeat;
+  }
+  
+  .logo-container {
+    flex: 1; /* Takes up space for the logo */
+    display: flex;
+    justify-content: center; /* Centers the logo horizontally */
+    align-items: center; /* Centers the logo vertically */
+  }
+  
+  .login-form-container {
+    flex: 1; /* Login form container takes up available space */
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    margin-left: 5%;
+    margin-top: 5%;
+    
+  }
+  
+  
+  .login-form {
+    background-color: bisque;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 500px;
+  }
+  /* Container for each input field */
+.input-group {
+  margin-bottom: 20px; /* Increased space between input fields */
+}
+
+/* Label for the input fields */
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333; /* Slightly darker color for better readability */
+}
+
+/* Input fields */
+.input-group input {
+  width: 100%;
+  padding: 12px 15px; /* Larger padding for better usability */
+  border: 2px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  background-color: #f9f9f9; /* Subtle background color */
+  font-size: 14px;
+  transition: all 0.3s ease; /* Smooth transition for focus effect */
+  box-sizing: border-box; /* Prevents padding from affecting width */
+}
+
+/* Focused input field */
+.input-group input:focus {
+  outline: none; /* Remove default outline */
+  border-color: #3498db; /* Blue border on focus */
+  background-color: #fff; /* Lighter background on focus */
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3); /* Subtle blue shadow */
+}
+
+/* Optional: Add placeholder styling */
+.input-group input::placeholder {
+  color: #aaa; /* Lighter placeholder text */
+  font-style: italic;
+}
+
+/* Error Message Styling (if you display error messages below the input fields) */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+>>>>>>> f31374b (added new https api configured)
